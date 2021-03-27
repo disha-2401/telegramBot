@@ -25,7 +25,7 @@
         public From From { get; set; }
 
         [JsonProperty("chat")]
-        public Chat Chat { get; set; }
+        public Chatchannel Chat { get; set; }
 
         [JsonProperty("date")]
         public long Date { get; set; }

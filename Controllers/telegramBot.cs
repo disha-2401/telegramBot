@@ -30,48 +30,67 @@ namespace Telegram_Bot.Controllers
         [HttpPost]
         public IActionResult Post(JObject payload)
         {
+            var privatechat = payload.ToObject<botUpdates>();
+            var channelmsg = payload.ToObject<BotChannelMsg>();
+            string value = ((dynamic)payload).message.message_id.ToString();
+           // var b=value.Toprivatechatect<Telegram.Bot.Types.Message>();
+            Console.WriteLine("hello");
+            //payload.Toprivatechatect<Telegram.Bot.Types.Message>();
+            var botClient = new TelegramBotClient("1770785118:AAF6d9W3xbI1G4n-EW4Nz4MiK6BgdjM9EN0");
+            var me = botClient.GetMeAsync().Result;
 
-            var hey = payload.ToObject<botUpdates>();
-            var myDetails = payload.ToString();
-            botUpdates data = JsonConvert.DeserializeObject<botUpdates>(myDetails);
+            Console.WriteLine(
+              $"Hello, World! I am user {me.Username} and my name is {me.FirstName}.");
+            if (privatechat.Message != null)
+            { 
+                if (privatechat.Message.Text == "/hello")
+                {
+                    botClient.SendTextMessageAsync(
+                        chatId: privatechat.Message.Chat.Id,
+                        text: "hello " + privatechat.Message.From.FirstName);
+                }
+                else if (privatechat.Message.Text == "/disha")
+                {
+                    botClient.SendTextMessageAsync(
+                        chatId: privatechat.Message.Chat.Id,
+                        text: privatechat.Message.From.FirstName + " called Disha");
+                }
+                else if (privatechat.Message.Text == "tell me time")
+                {
+                    botClient.SendTextMessageAsync(
+                        chatId: privatechat.Message.Chat.Id,
+                        text: "Current time is = " + DateTime.Now.ToString("h:mm:ss tt"));
+                }
+                else if (privatechat.Message.Text.StartsWith("/"))
+                {
+                    botClient.SendTextMessageAsync(
+                        chatId: privatechat.Message.Chat.Id,
+                        text: "hello " + privatechat.Message.From.FirstName + " you said \n" + privatechat.Message.Text);
+                }
+                return Ok(payload.ToString());
+
+            }
+            else if (channelmsg.ChannelPost != null)
+            {
+                Console.WriteLine(channelmsg.UpdateId);
+                Console.WriteLine(channelmsg.ChannelPost.SenderChat.Username);
+
+                botClient.SendTextMessageAsync(
+                        chatId: channelmsg.ChannelPost.SenderChat.Username,
+                        text: "channel msg");
+                return Ok(payload.ToString());
+            }
+            else
+            {
+                return Ok(payload.ToString());
+            }
+            var abc = payload.ToString();
+            botUpdates data = JsonConvert.DeserializeObject<botUpdates>(abc);
             var msgid = data.Message.Text;
             Console.WriteLine(payload.ToString());
             Console.WriteLine(msgid);
-            var botClient = new TelegramBotClient("1770785118:AAF6d9W3xbI1G4n-EW4Nz4MiK6BgdjM9EN0");
-            // var me = botClient.GetMeAsync().Result;
-            // Console.WriteLine(
-            //   $"Hello, World! I am user {me.Username} and my name is {me.FirstName}."
-            // );
-            if (data.Message.Text == "/hello")
-            {
-                botClient.SendTextMessageAsync(
-                    chatId: data.Message.Chat.Id,
-                    text: "hello " + data.Message.From.FirstName);
-            }
-            else if (data.Message.Text == "/disha")
-            {
-                botClient.SendTextMessageAsync(
-                    chatId: data.Message.Chat.Id,
-                    text: data.Message.From.FirstName + " called Disha");
-            }
-            else if (data.Message.Chat.Type == "private")
-            {
-                if (data.Message.Text == "tell me time")
-                {
-                    botClient.SendTextMessageAsync(
-                        chatId: data.Message.Chat.Id,
-                        text: "Current time is = " + DateTime.Now.ToString("h:mm:ss tt"));
-                }
-            }
-            else if (data.Message.Text.StartsWith("/"))
-            {
-                botClient.SendTextMessageAsync(
-                    chatId: data.Message.Chat.Id,
-                    text: "hello " + data.Message.From.FirstName + " you said \n" + data.Message.Text);
-            }
 
-
-            return Ok(payload.ToString());
+            return Ok();
         }
 
 

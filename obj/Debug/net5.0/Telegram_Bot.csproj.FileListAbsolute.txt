@@ -7,13 +7,15 @@ C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\bin\Debug\net5.0\Telegram_
 C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\bin\Debug\net5.0\Telegram_Bot.dll
 C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\bin\Debug\net5.0\ref\Telegram_Bot.dll
 C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\bin\Debug\net5.0\Telegram_Bot.pdb
+C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\bin\Debug\net5.0\Microsoft.OpenApi.dll
 C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
 C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\bin\Debug\net5.0\Telegram.Bot.dll
-C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\obj\Debug\net5.0\Telegram_Bot.csprojAssemblyReference.cache
 C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\obj\Debug\net5.0\Telegram_Bot.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\obj\Debug\net5.0\Telegram_Bot.AssemblyInfoInputs.cache
 C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\obj\Debug\net5.0\Telegram_Bot.AssemblyInfo.cs
@@ -29,6 +31,4 @@ C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\obj\Debug\net5.0\Telegram_
 C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\obj\Debug\net5.0\ref\Telegram_Bot.dll
 C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\obj\Debug\net5.0\Telegram_Bot.pdb
 C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\obj\Debug\net5.0\Telegram_Bot.genruntimeconfig.cache
-C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
-C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\disha\source\repos\Telegram_Bot\Telegram_Bot\obj\Debug\net5.0\Telegram_Bot.csprojAssemblyReference.cache
